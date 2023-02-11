@@ -1,3 +1,11 @@
+debugger
+window.onload = function () {
+	document.body.classList.add('loaded_hiding');
+	window.setTimeout(function () {
+		document.body.classList.add('loaded');
+		document.body.classList.remove('loaded_hiding');
+	}, 500);
+}
 document.addEventListener('touchstart', haendleTouchStart, false);
 document.addEventListener('touchmove', haendleTouchMove, false);
 
@@ -37,6 +45,7 @@ function haendleTouchMove(event) {
 			mainList.classList.add('first__nav_sticky');
 			secondList.classList.add('second__nav_sticky');
 
+
 		}
 		else {
 			console.log('top')
@@ -53,16 +62,16 @@ const observer = new IntersectionObserver((entries) => {
 			console.log('bu');
 			document.querySelectorAll('.second__link').forEach((link) => {
 				if (link.getAttribute('href').replace('#', '') === entry.target.id) {
-
+					link.scrollIntoView({
+						inline: "nearest"
+					})
 
 					link.classList.add('second__link_activ')
 				}
 				else {
 					link.classList.remove('second__link_activ')
 				}
-				link.scrollIntoView({
-					inline: "nearest"
-				})
+
 
 			})
 		}
