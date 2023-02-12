@@ -20,8 +20,8 @@
 		&__blok {			
 		}
 		&__title {
-			font-size: 18px;
-			margin: 5px;			
+			
+					
 		}
 		&__carts {
 			display: grid;
@@ -31,9 +31,8 @@
 			justify-items: center;		
 		}
 }
-.title {
-	margin: 5px auto;
-	width: 100px;
+.title {		
+	text-align: center;
 }
 .nav {
 		&__mainblok {		
@@ -42,11 +41,12 @@
 }
 .first {
 		&__nav {	
-			//transition: all 0.5s linear 0s;				
+			transition: all 0.5s linear 0s;
+			position: sticky;
+			top:0;
 			
 			&_sticky{				
-		//position: sticky;			
-		//	top:10px; 
+			top: 35px;		
 			}
 		}
 		&__list {
@@ -71,11 +71,8 @@
 		&__nav {		
 			transition: all 0.5s linear 0s;		
 			position: sticky;
-			//top: 5px;
-			
-			&_sticky{
-				//
-				//top:33px;
+			top: 0px;			
+			&_sticky{			
 			}
 		}
 		&__list {

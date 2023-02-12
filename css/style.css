@@ -23,11 +23,6 @@
           align-items: center;
 }
 
-.page__title {
-  font-size: 18px;
-  margin: 5px;
-}
-
 .page__carts {
   display: -ms-grid;
   display: grid;
@@ -40,8 +35,19 @@
 }
 
 .title {
-  margin: 5px auto;
-  width: 100px;
+  text-align: center;
+}
+
+.first__nav {
+  -webkit-transition: all 0.5s linear 0s;
+  transition: all 0.5s linear 0s;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+.first__nav_sticky {
+  top: 35px;
 }
 
 .first__list {
@@ -75,6 +81,7 @@
   transition: all 0.5s linear 0s;
   position: -webkit-sticky;
   position: sticky;
+  top: 0px;
 }
 
 .second__list {
