@@ -8,6 +8,7 @@
   border: 0;
   font-weight: 400;
   font-family: 'Raleway', sans-serif;
+  color: black;
 }
 
 .page__main {
@@ -21,6 +22,12 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background: url("../img/49324.jpg") 0 0/contain;
+}
+
+.page__title {
+  width: 90%;
+  margin: 0 auto;
 }
 
 .page__carts {
@@ -38,12 +45,18 @@
   text-align: center;
 }
 
+.title__wrapper-img > img {
+  height: 150px;
+}
+
 .first__nav {
   -webkit-transition: all 0.5s linear 0s;
   transition: all 0.5s linear 0s;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
+  width: 90%;
+  margin: 0 auto;
 }
 
 .first__nav_sticky {
@@ -63,13 +76,18 @@
           justify-content: space-between;
   width: 80%;
   height: 30px;
-  background-color: aliceblue;
+  background-color: #ffffff;
   margin: 0 auto;
   border-radius: 5px;
+  align-items: center;
 }
 
 .first__item {
   margin: 2px 10px;
+}
+
+.first__item > a {
+  color: black;
 }
 
 .first__link {
@@ -82,32 +100,34 @@
   position: -webkit-sticky;
   position: sticky;
   top: 0px;
+  margin: 0 auto;
 }
 
 .second__list {
-  background: wheat;
-  border-radius: 10px;
-  width: 90%;
-  margin: 5px auto;
+  background: #ffffff;
+  height: 45px;
   overflow: auto;
   list-style-type: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-}
-
-.second__item {
-  margin: 4px 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .second__link {
   white-space: nowrap;
   text-decoration: none;
+  border: solid 1px #A2A0A0;
+  border-radius: 5px;
+  margin: 4px 10px;
+  padding: 5px;
 }
 
 .second__link_activ {
-  border-radius: 5px;
-  border: solid 1px black;
+  border: solid 1px #d0b413;
+  color: #d0b413;
 }
 
 .cart {
@@ -115,12 +135,12 @@
   display: -ms-flexbox;
   display: flex;
   border-radius: 5px;
-  border: 2px solid;
   padding: 0 5px;
   margin: 0 10px;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  height: 160px;
+  height: 200px;
+  background: #eeeeeeee;
 }
 
 .cart__img-wrapper {
@@ -195,36 +215,17 @@
   right: 0;
   bottom: 0;
   overflow: hidden;
-  /* фоновый цвет */
-  background: #e0e0e0;
+  background: #232323;
   z-index: 1001;
 }
 
 .preloader__image {
   position: relative;
-  top: 50%;
-  left: 50%;
-  width: 70px;
-  height: 70px;
-  margin-top: -35px;
-  margin-left: -35px;
-  text-align: center;
-  -webkit-animation: preloader-rotate 2s infinite linear;
-          animation: preloader-rotate 2s infinite linear;
-}
-
-@-webkit-keyframes preloader-rotate {
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-}
-
-@keyframes preloader-rotate {
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
+  top: 25%;
+  width: 100%;
+  height: 300px;
+  background: url("../img/bg/beer.gif") no-repeat 50% 50%;
+  /*расположение (url) изображения gif и др. параметры*/
 }
 
 .loaded_hiding .preloader {

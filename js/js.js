@@ -63,7 +63,7 @@ const observer = new IntersectionObserver((entries) => {
 			document.querySelectorAll('.second__link').forEach((link) => {
 				if (link.getAttribute('href').replace('#', '') === entry.target.id) {
 					link.scrollIntoView({
-						inline: "nearest"
+						inline: "center",
 					})
 
 					link.classList.add('second__link_activ')
@@ -71,14 +71,12 @@ const observer = new IntersectionObserver((entries) => {
 				else {
 					link.classList.remove('second__link_activ')
 				}
-
-
 			})
 		}
 	});
 
 }, {
-	threshold: 0.7,
+	threshold: 0.8,
 });
 
 document.querySelectorAll('.page__blok').forEach(
@@ -104,3 +102,19 @@ document.querySelector('.first__list').addEventListener('click', (event) => {
 		})
 	}
 })
+
+// создаём модальное окно
+const img = document.querySelectorAll('.cart__img')
+img.forEach(element => {
+	console.log(element)
+	var modal = $modal({
+		title: element.parentElement.previousElementSibling.firstElementChild.firstElementChild.innerHTML,
+		content: element.outerHTML,
+	});
+
+	// при клике по кнопке #show-modal
+	element.addEventListener('click', function () {
+		// отобразим модальное окно
+		modal.show();
+	});
+});
