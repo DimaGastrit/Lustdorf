@@ -1,4 +1,4 @@
-debugger
+
 window.onload = function () {
 	document.body.classList.add('loaded_hiding');
 	window.setTimeout(function () {
@@ -41,21 +41,30 @@ function haendleTouchMove(event) {
 	else {
 		if (yDiff > 0) {
 			console.log('down');
-			console.log(mainList.style);
 			mainList.classList.add('first__nav_sticky');
-			secondList.classList.add('second__nav_sticky');
-
-
 		}
 		else {
 			console.log('top')
 			mainList.classList.remove('first__nav_sticky');
-			secondList.classList.remove('second__nav_sticky');
 		}
 	}
 	x1 = null;
 	y1 = null;
 }
+
+window.addEventListener('scroll', function (e) {
+	if (this.oldScroll > this.scrollY) {
+		console.log('up');
+		mainList.classList.add('first__nav_sticky');
+
+	} else {
+		console.log('down');
+		mainList.classList.remove('first__nav_sticky');
+	}
+	this.oldScroll = this.scrollY;
+}, false);
+
+
 const observer = new IntersectionObserver((entries) => {
 	entries.forEach((entry) => {
 		if (entry.isIntersecting) {
@@ -65,7 +74,6 @@ const observer = new IntersectionObserver((entries) => {
 					link.scrollIntoView({
 						inline: "center",
 					})
-
 					link.classList.add('second__link_activ')
 				}
 				else {
