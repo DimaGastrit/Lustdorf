@@ -84,7 +84,7 @@ const observer = new IntersectionObserver((entries) => {
 	});
 
 }, {
-	threshold: 0.8,
+	threshold: 0.5,
 });
 
 document.querySelectorAll('.page__blok').forEach(
@@ -116,8 +116,10 @@ const img = document.querySelectorAll('.cart__img')
 img.forEach(element => {
 	console.log(element)
 	var modal = $modal({
-		title: element.parentElement.previousElementSibling.firstElementChild.firstElementChild.innerHTML,
-		content: element.outerHTML,
+		title: element.parentElement.previousElementSibling.firstElementChild.innerHTML,
+		content: `${element.outerHTML} ${element.parentElement.previousElementSibling.childNodes[3].innerHTML}`,
+
+
 	});
 
 	// при клике по кнопке #show-modal

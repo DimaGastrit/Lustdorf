@@ -5,8 +5,8 @@
   padding: 0;
   margin: 0;
   border: 0;
-  font-weight: 400;
-  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  font-family: 'Oswald', sans-serif;
   color: black;
 }
 
@@ -34,6 +34,14 @@
           align-items: center;
 }
 
+.title__wrapper::after {
+  content: '';
+  display: block;
+  height: 10px;
+  background: #FFC614;
+  width: 100%;
+}
+
 .title__img_wrappeer {
   width: 300px;
   height: 100px;
@@ -52,7 +60,6 @@
   font-family: 'Oswald', sans-serif;
   font-weight: 400;
   font-size: 20px;
-  text-align: left;
 }
 
 .page__main {
@@ -214,6 +221,10 @@
 }
 
 .cart__item_beer {
+  display: none;
+}
+
+.cart__item_beerPrise {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -222,7 +233,7 @@
           justify-content: space-evenly;
 }
 
-.cart__item_sab {
+.cart__item_description {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -230,13 +241,15 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 
 .cart__item_title {
-  margin-top: 7px;
-  font-size: 18px;
+  font-size: 20px;
+  margin-top: 20px;
+  font-weight: 500;
 }
 
 .cart__item_pw {
@@ -248,6 +261,7 @@
 }
 
 .cart__item_pw-beer {
+  margin-top: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -255,6 +269,10 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  border: 1px solid #FFC614;
+  border-radius: 5px;
+  width: 150px;
+  padding: 5px 0;
 }
 
 .cart__item_pw-beer :last-child {
