@@ -23,6 +23,8 @@
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 0.3rem;
   box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.3);
+  align-items: center;
+   
 }
 
 @media (min-width: 576px) {
@@ -81,7 +83,14 @@
   flex: 1 1 auto;
   padding: 15px;
   overflow: auto;
+  align-self: center
+  ;
+  
 }
+.modal__body>img {
+display: block;
+ }
+
 
 .modal__footer {
   display: flex;

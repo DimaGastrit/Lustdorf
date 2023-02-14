@@ -196,10 +196,75 @@
   border-radius: 5px;
   padding: 0 5px;
   margin: 0 10px;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   height: 200px;
   background: #eeeeeeee;
+}
+
+.cart__item {
+  width: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.cart__item_title {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.cart__item_discription {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  width: 150px;
+  overflow: hidden;
+  font-size: 13px;
+  position: relative;
+  height: 85px;
+  width: 118px;
+}
+
+.cart__item_praseWraper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 80%;
+  margin-top: 2px;
+  border: 1px solid #FFC614;
+  border-radius: 5px;
+}
+
+.cart__item_prices {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 .cart__img-wrapper {
@@ -216,69 +281,75 @@
   max-width: 290px;
 }
 
-.cart__item_dish {
-  margin-top: 7px;
-}
+/*.cart {
+	display: flex;
+	border-radius: 5px;
+	padding: 0 5px;
+	margin: 0 10px;
+	justify-content: space-around;	
+	height: 200px;
+	background: #eeeeeeee;
+		&__img-wrapper {			
+			width: 50%;
+			align-self: center;		
+		}
+		&__img {
+			width: 100%;
+			border-radius: 10px;	
+			height: 10%;	
+			max-width:  290px; 
+		}
+		&__item {
+			&_dishPrise{
+				align-self: flex-start;
+			}
+			&_beer{
+				display: none;				
+			}
+			&_beerPrise{
+				display: flex;
+				justify-content: space-evenly;
+				}
+			&_description {
+				display: flex;
+				flex-direction: column;
+				justify-content: flex-start;
+				width: 150px;						
+			}
+			&_row{
+			}
+			&_title {				
+				font-size: 20px;
+				margin-top: 20px;
+				font-weight: 500;
 
-.cart__item_beer {
-  display: none;
-}
+				
+			}
+			&_weight {
+			}
 
-.cart__item_beerPrise {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-}
+			&_price {
+			}
 
-.cart__item_description {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+			&_rew {
+			}
+			&_pw{
+				display: flex;
+				justify-content: space-around;				
+			}
+			&_pw-beer{
+				margin-top: 30px;
+				display: flex;
+				flex-direction: column;
+				border: 1px solid #FFC614 ;
+				border-radius: 5px;
+				width: 150px;
+				padding: 5px 0;
+								
+			}
+		}
 }
-
-.cart__item_title {
-  font-size: 20px;
-  margin-top: 20px;
-  font-weight: 500;
-}
-
-.cart__item_pw {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-}
-
-.cart__item_pw-beer {
-  margin-top: 30px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  border: 1px solid #FFC614;
-  border-radius: 5px;
-  width: 150px;
-  padding: 5px 0;
-}
-
-.cart__item_pw-beer :last-child {
-  padding-right: 14px;
-}
-
+*/
 .preloader {
   position: fixed;
   left: 0;

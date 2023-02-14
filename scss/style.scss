@@ -169,7 +169,90 @@
 					
 		}
 }
+
 .cart {
+	display: flex;
+	border-radius: 5px;
+	padding: 0 5px;
+	margin: 0 10px;
+	justify-content: space-between;	
+	height: 200px;
+	background: #eeeeeeee;
+	&__item {
+		width: 150px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+					
+		&_title {
+			font-size: 20px;
+			
+			font-weight: 500;
+		}
+		&_discription {
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-start;
+			width: 150px;	
+			overflow:hidden;
+			font-size: 13px;
+			position: relative;
+			height: 85px;
+			width: 118px;
+
+		}
+		&_praseWraper {
+			display: flex;
+			justify-content: space-around;		
+			flex-direction: column;			
+			width: 80%;
+			margin-top: 2px;
+			border: 1px solid #FFC614 ;
+			border-radius: 5px;			
+
+		}
+		&_prices {
+			width: 100%;
+			display: flex;
+			justify-content: space-evenly;
+			
+			
+			
+		}
+
+		&_price {
+		}
+
+		&_beer {
+		}
+
+		&_weight {
+		}
+
+		&_prise {
+		}
+
+		&_desj {
+		}
+	}
+
+	&__img-wrapper {
+		width: 50%;
+		align-self: center;	
+	}
+
+	&__img {
+		width: 100%;
+		border-radius: 10px;	
+		height: 10%;	
+		max-width:  290px; 
+	}
+}
+.discription_hiden{
+	//display: none;
+}
+
+/*.cart {
 	display: flex;
 	border-radius: 5px;
 	padding: 0 5px;
@@ -188,8 +271,8 @@
 			max-width:  290px; 
 		}
 		&__item {
-			&_dish{
-				margin-top: 7px;
+			&_dishPrise{
+				align-self: flex-start;
 			}
 			&_beer{
 				display: none;				
@@ -202,7 +285,7 @@
 				display: flex;
 				flex-direction: column;
 				justify-content: flex-start;
-						
+				width: 150px;						
 			}
 			&_row{
 			}
@@ -233,12 +316,11 @@
 				border-radius: 5px;
 				width: 150px;
 				padding: 5px 0;
-				:last-child{
-					padding-right: 14px;
-				}				
+								
 			}
 		}
 }
+*/
 
 .preloader {
 	position: fixed;
