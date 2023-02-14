@@ -117,7 +117,7 @@ img.forEach(element => {
 	console.log(element)
 	var modal = $modal({
 		title: element.parentElement.previousElementSibling.firstElementChild.innerHTML,
-		content: `${element.outerHTML} `,
+		content: `  ${element.outerHTML} `,
 		footerButtons: [
 			{ class: 'btn btn__cancel', text: `${element.parentElement.previousElementSibling.childNodes[3].innerHTML}`, handler: 'modalHandlerCancel' }
 
