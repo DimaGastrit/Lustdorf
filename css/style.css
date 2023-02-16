@@ -200,7 +200,7 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
   background: #eeeeeeee;
-  max-width: 600px;
+  max-width: 500px;
 }
 
 .cart__item {
@@ -322,75 +322,6 @@
   display: none;
 }
 
-/*.cart {
-	display: flex;
-	border-radius: 5px;
-	padding: 0 5px;
-	margin: 0 10px;
-	justify-content: space-around;	
-	height: 200px;
-	background: #eeeeeeee;
-		&__img-wrapper {			
-			width: 50%;
-			align-self: center;		
-		}
-		&__img {
-			width: 100%;
-			border-radius: 10px;	
-			height: 10%;	
-			max-width:  290px; 
-		}
-		&__item {
-			&_dishPrise{
-				align-self: flex-start;
-			}
-			&_beer{
-				display: none;				
-			}
-			&_beerPrise{
-				display: flex;
-				justify-content: space-evenly;
-				}
-			&_description {
-				display: flex;
-				flex-direction: column;
-				justify-content: flex-start;
-				width: 150px;						
-			}
-			&_row{
-			}
-			&_title {				
-				font-size: 20px;
-				margin-top: 20px;
-				font-weight: 500;
-
-				
-			}
-			&_weight {
-			}
-
-			&_price {
-			}
-
-			&_rew {
-			}
-			&_pw{
-				display: flex;
-				justify-content: space-around;				
-			}
-			&_pw-beer{
-				margin-top: 30px;
-				display: flex;
-				flex-direction: column;
-				border: 1px solid #FFC614 ;
-				border-radius: 5px;
-				width: 150px;
-				padding: 5px 0;
-								
-			}
-		}
-}
-*/
 .preloader {
   position: fixed;
   left: 0;
@@ -419,5 +350,24 @@
 
 .loaded .preloader {
   display: none;
+}
+
+.footer {
+  width: 100%;
+  background: #F8F8F8;
+}
+
+.footer::before {
+  content: '';
+  display: block;
+  height: 10px;
+  background: #FFC614;
+  width: 100%;
+}
+
+.footer__logo {
+  width: 300px;
+  height: 150px;
+  background: url("../img/bg/logo-black.png") 0 0/contain no-repeat;
 }
 /*# sourceMappingURL=style.css.map */
