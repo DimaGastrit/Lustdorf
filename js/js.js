@@ -71,10 +71,10 @@ const observer = new IntersectionObserver((entries) => {
 			console.log('bu');
 			document.querySelectorAll('.second__link').forEach((link) => {
 				if (link.getAttribute('href').replace('#', '') === entry.target.id) {
+					link.classList.add('second__link_activ')
 					link.scrollIntoView({
 						inline: "center",
 					})
-					link.classList.add('second__link_activ')
 				}
 				else {
 					link.classList.remove('second__link_activ')
@@ -82,11 +82,9 @@ const observer = new IntersectionObserver((entries) => {
 			})
 		}
 	});
-
 }, {
 	threshold: 0.5,
 });
-
 document.querySelectorAll('.page__blok').forEach(
 	(section) => observer.observe(section),
 );
@@ -110,7 +108,6 @@ document.querySelector('.first__list').addEventListener('click', (event) => {
 		})
 	}
 })
-
 // создаём модальное окно
 const img = document.querySelectorAll('.cart__img')
 img.forEach(element => {
@@ -119,13 +116,8 @@ img.forEach(element => {
 		title: element.parentElement.previousElementSibling.firstElementChild.innerHTML,
 		content: `  ${element.outerHTML} `,
 		footerButtons: [
-			{ class: 'btn btn__cancel', text: `${element.parentElement.previousElementSibling.childNodes[3].innerHTML}`, handler: 'modalHandlerCancel' }
-
+			{ class: 'text', text: `${element.parentElement.previousElementSibling.childNodes[3].innerHTML}`, handler: 'modalHandlerCancel' }
 		]
-
-
-
-
 	});
 
 	// при клике по кнопке #show-modal
