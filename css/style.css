@@ -21,6 +21,11 @@
      object-fit: cover;
 }
 
+.wrapper {
+  width: 765px;
+  margin: 0 auto;
+}
+
 .title__wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -247,7 +252,7 @@
 .cart__item_plag {
   height: 100%;
   width: 100%;
-  background: url("../img/bg/smol.png") center/contain no-repeat;
+  background: url("../img/bg/small.png") center/contain no-repeat;
 }
 
 .cart__item_praseWraper {

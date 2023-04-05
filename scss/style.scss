@@ -20,6 +20,8 @@
 	}
 }
 .wrapper {	
+	width: 765px;
+	margin: 0 auto;
 }
 .title {
 	
@@ -68,6 +70,7 @@
 			flex-direction: column;
 			align-items: center;
 			background: url('../img/bg/bg.jpg') 0 0 /contain ;
+		
 		}
 		&__blok {		
 			width: 100%;
@@ -204,7 +207,7 @@
 		
 			height: 100%;
 			width: 100%;
-			background: url('../img/bg/smol.png') center / contain no-repeat;
+			background: url('../img/bg/small.png') center / contain no-repeat;
 		}
 		&_praseWraper {
 			align-self: center;
