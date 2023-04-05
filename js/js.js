@@ -1,13 +1,14 @@
 
 window.onload = function () {
+
 	document.body.classList.add('loaded_hiding');
 	window.setTimeout(function () {
 		document.body.classList.add('loaded');
 		document.body.classList.remove('loaded_hiding');
 	}, 500);
 }
-document.addEventListener('touchstart', haendleTouchStart, false);
-document.addEventListener('touchmove', haendleTouchMove, false);
+//document.addEventListener('touchstart', haendleTouchStart, false);
+//document.addEventListener('touchmove', haendleTouchMove, false);
 
 const mainList = document.querySelector('.first__nav')
 const secondList = document.querySelector('.second__nav')
@@ -16,7 +17,7 @@ const logBlock = document.querySelector('.page')
 let x1 = null;
 let y1 = null;
 
-function haendleTouchStart(event) {
+/*function haendleTouchStart(event) {
 	const firstTouch = event.touches[0];
 
 	x1 = firstTouch.clientX;
@@ -24,6 +25,7 @@ function haendleTouchStart(event) {
 
 }
 function haendleTouchMove(event) {
+
 	if (!x1 || !y1) {
 		return false;
 	}
@@ -50,9 +52,9 @@ function haendleTouchMove(event) {
 	}
 	x1 = null;
 	y1 = null;
-}
-
-window.addEventListener('scroll', function (e) {
+}*/
+/*window.addEventListener('scroll', function (e) {
+	debugger
 	if (this.oldScroll > this.scrollY) {
 		console.log('up');
 		mainList.classList.add('first__nav_sticky');
@@ -62,15 +64,17 @@ window.addEventListener('scroll', function (e) {
 		mainList.classList.remove('first__nav_sticky');
 	}
 	this.oldScroll = this.scrollY;
-}, false);
-
-
+}, false);*/
 const observer = new IntersectionObserver((entries) => {
+
 	entries.forEach((entry) => {
 		if (entry.isIntersecting) {
 			console.log('bu');
 			document.querySelectorAll('.second__link').forEach((link) => {
-				if (link.getAttribute('href').replace('#', '') === entry.target.id) {
+				let y1 = link.getAttribute('href').replace('#', '');
+				console.log(y1)
+				if (
+					link.getAttribute('href').replace('#', '') === entry.target.id) {
 					link.classList.add('second__link_activ')
 					link.scrollIntoView({
 						inline: "center",
@@ -83,25 +87,31 @@ const observer = new IntersectionObserver((entries) => {
 		}
 	});
 }, {
-	threshold: 0.5,
+	threshold: 0.7,
 });
+
 document.querySelectorAll('.page__blok').forEach(
 	(section) => observer.observe(section),
 );
 document.querySelector('.second__list').addEventListener('click', (event) => {
+
 	if (event.target.classList.contains('second__link')) {
 		event.preventDefault();
 		const id = event.target.getAttribute('href').replace('#', '')
+		console.log(id)
 		window.scrollTo({
 			top: document.getElementById(id).offsetTop,
 			behavior: 'smooth',
 		})
+
 	}
 })
 document.querySelector('.first__list').addEventListener('click', (event) => {
+
 	if (event.target.classList.contains('first__link')) {
 		event.preventDefault();
 		const id = event.target.getAttribute('href').replace('#', '')
+		console.log(id)
 		window.scrollTo({
 			top: document.getElementById(id).offsetTop,
 			behavior: 'smooth',
